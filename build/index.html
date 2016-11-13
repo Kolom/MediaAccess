@@ -28,14 +28,14 @@
           <h1>Create a new account</h1>
           <hr>
           <input type="email" placeholder="Email" id="email-input">
-          <p class="input-error--email">Please enter correct value</p>
+          <p class="input-error--email hidden">Please enter correct value</p>
           <input type="text" placeholder="First name" id="first_name-input">
-          <p class="input-error--f_name">Please enter correct value</p>
+          <p class="input-error--f_name hidden">Please enter correct value</p>
           <input type="text" placeholder="Last name" id="last_name-input">
-          <p class="input-error--l_name">Please enter correct value</p>
+          <p class="input-error--l_name hidden">Please enter correct value</p>
           <label for="password-input">Generate strong password</label>
           <input type="password" placeholder="Password" id="password-input" class="error-password">
-          <p class="input-error--password">Please enter correct value</p>
+          <p class="input-error--password hidden">Please enter correct value</p>
           <section class="pass_requirements col-xs-12 pad0">
             <h2>Password must meet the following requirements:</h2>
             <ul class="pass_requirements-list">
@@ -53,6 +53,7 @@
           <section class="pass_confirmation col-xs-12 pad0">
             <input type="password" placeholder="Confirm password" id="password_confirm-input" class="error-password">
             <div class="pass-str-indicator">
+              <p class="password-str">Password strength: Weak</p>
               <div class="first_level">
                 <div class="ind-bar"></div>
                 <p class="password-str">Password strength: Fair</p>
@@ -77,7 +78,6 @@
               </div>
             </div>
             <p class="input-error--password">Password must be at least 8 characters long</p>
-            <p class="password-str">Password strength: Weak</p>
           </section>
           <section class="choose_country col-xs-12 pad0">
             <div class="country_checkbox">

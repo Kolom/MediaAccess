@@ -16,14 +16,14 @@ html
           h1 Create a new account
           hr
           input(type="email" placeholder="Email" id="email-input")
-          p.input-error--email Please enter correct value
+          p.input-error--email.hidden Please enter correct value
           input(type="text" placeholder="First name" id="first_name-input")
-          p.input-error--f_name Please enter correct value
+          p.input-error--f_name.hidden Please enter correct value
           input(type="text" placeholder="Last name" id="last_name-input")
-          p.input-error--l_name Please enter correct value
+          p.input-error--l_name.hidden Please enter correct value
           label(for="password-input") Generate strong password
           input(type="password" placeholder="Password" id="password-input").error-password
-          p.input-error--password Please enter correct value
+          p.input-error--password.hidden Please enter correct value
           section.pass_requirements.col-xs-12.pad0
             h2 Password must meet the following requirements:
             ul.pass_requirements-list
@@ -37,6 +37,7 @@ html
           section.pass_confirmation.col-xs-12.pad0
             input(type="password" placeholder="Confirm password" id="password_confirm-input").error-password
             .pass-str-indicator
+              p.password-str Password strength: Weak
               .first_level
                 .ind-bar
                 p.password-str Password strength: Fair
@@ -56,7 +57,7 @@ html
                 .ind-bar
                 p.password-str Password strength: Very Strong
             p.input-error--password Password must be at least 8 characters long
-            p.password-str Password strength: Weak
+
           section.choose_country.col-xs-12.pad0
             .country_checkbox
               input(type="checkbox" id="BMSAT")
