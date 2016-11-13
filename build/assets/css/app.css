@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* ------------------------------------------*/
+/* Reset*/
+/* ------------------------------------------*/
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+body {
+  background: #fff;
+  margin: 0px;
+  padding: 0px; }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none; }
+
+html, body {
+  min-height: 100%; }
+
+a {
+  background: transparent; }
+
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, main,
+nav, section, summary {
+  display: block; }
+
+p, ul, ol, dl, dd,
+h1, h2, h3, h4, h5, h6,
+blockquote, fieldset {
+  margin: 0; }
+
+ul, ol, fieldset {
+  padding: 0; }
+
+fieldset, img {
+  border: 0; }
+
+li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font: inherit; }
+
+textarea, select {
+  color: inherit;
+  font: inherit; }
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+input[type="radio"] {
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  font: inherit; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+q {
+  quotes: '«' '»'; }
+
+/* ------------------------------------------*/
+/* Modules*/
+/* ------------------------------------------*/
+.divider {
+  display: table;
+  width: 100%; }
+  .divider_base, .divider_side {
+    display: table-cell;
+    vertical-align: top; }
+  .divider_side {
+    width: 1%; }
+  .divider--middle {
+    vertical-align: middle; }
+    .divider--middle_base, .divider--middle_side {
+      vertical-align: middle; }
+
+/* ------------------------------------------*/
+/* Variables*/
+/*-------------------------------------------*/
+/* ------------------------------------------*/
+/* Pages*/
+/*-------------------------------------------*/
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; }
+
+.relative {
+  position: relative; }
+
+.pad0 {
+  padding-left: 0;
+  padding-right: 0; }
+
+.grey_input, .new_account_form--customer input[type="text"],
+.new_account_form--customer input[type="email"],
+.new_account_form--customer input[type="password"] {
+  margin: 10px auto;
+  padding: 10px 5px;
+  border: 1px solid #eeeeee;
+  color: #eeeeee; }
+
+.new_account_form--customer {
+  font-family: Arial; }
+  .new_account_form--customer .account_form-logo {
+    margin: auto;
+    display: block; }
+  .new_account_form--customer h1 {
+    font-size: 2rem; }
+  .new_account_form--customer input[type="text"],
+  .new_account_form--customer input[type="email"],
+  .new_account_form--customer input[type="password"] {
+    width: 100%; }
+  .new_account_form--customer label[for="password-input"] {
+    text-align: center;
+    color: #40649b;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -1px; }
+  .new_account_form--customer .error-password {
+    border: 1px solid #ce0014 !important; }
+  .new_account_form--customer #account_form-submit {
+    background-color: #314d77;
+    color: #fff;
+    border: 1px solid #314d77;
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px 0; }
+  .new_account_form--customer #account_form-submit:active {
+    background-color: #fff;
+    color: #314d77;
+    border: 1px solid #314d77; }
+
+.choose_country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: stretch;
+      align-self: stretch; }
+  .choose_country .country_checkbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%; }
+    .choose_country .country_checkbox input[type="checkbox"] {
+      margin-right: 5px;
+      margin-top: 1px; }
+    .choose_country .country_checkbox label {
+      font-weight: 100;
+      font-size: 1.3rem; }
+
+.pass_requirements {
+  border: 1px solid #557db9;
+  padding: 15px;
+  background-color: white; }
+  .pass_requirements h2 {
+    color: #557db9;
+    font-size: 1.5rem;
+    margin-bottom: 5px; }
+  .pass_requirements .pass_requirements-list li {
+    color: #ce0014;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    list-style: disc; }
+
+.pass_confirmation #password_confirm-input {
+  margin-bottom: 0; }
+
+.pass_confirmation .pass-str-indicator {
+  width: 100%; }
+
+.pass_confirmation .first_level > .ind-bar {
+  display: inline-block;
+  height: 5px;
+  width: 25%;
+  margin-right: -3px;
+  background-color: #ce0014; }
+
+.pass_confirmation .sec_level > .ind-bar {
+  display: inline-block;
+  height: 5px;
+  width: 25%;
+  margin-right: -3px;
+  background-color: #fff328; }
+
+.pass_confirmation .third_level > .ind-bar {
+  display: inline-block;
+  height: 5px;
+  width: 25%;
+  margin-right: -3px;
+  background-color: #88ff90; }
+
+.pass_confirmation .fourth_level > .ind-bar {
+  display: inline-block;
+  height: 5px;
+  width: 25%;
+  margin-right: -3px;
+  background-color: #32ff0e; }
+
+.input-error, .input-error--email,
+.input-error--f_name,
+.input-error--l_name,
+.input-error--password {
+  color: #ff0e0c;
+  font-size: 1.3rem;
+  padding-left: 5px;
+  margin: 5px 0; }

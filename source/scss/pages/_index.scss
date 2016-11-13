@@ -1,0 +1,152 @@
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.relative {
+  position: relative;
+}
+.pad0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.grey_input {
+  margin: 10px auto;
+  padding: 10px 5px;
+  border: 1px solid #eeeeee;
+  color: #eeeeee;
+}
+
+.new_account_form--customer {
+  font-family: Arial;
+  .account_form-logo {
+    margin: auto;
+    display: block;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    @extend .grey_input;
+  }
+  label[for="password-input"] {
+    text-align: center;
+    color: darken( $secHeadingColor, 10% );
+    //color: #40649b;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+  }
+  .error-password {
+    border: 1px solid #ce0014 !important;
+  }
+
+  #account_form-submit {
+    background-color: darken( $secHeadingColor, 20% );
+    color: #fff;
+    border: 1px solid darken( $secHeadingColor, 20% );
+    width: 100%;
+    padding: 10px 0;
+    margin: 20px 0;
+  }
+  #account_form-submit:active {
+    background-color: #fff;
+    color: darken( $secHeadingColor, 20% );
+    border: 1px solid darken( $secHeadingColor, 20% );
+  }
+}
+
+.choose_country {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-self: stretch;
+  .country_checkbox {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 33%;
+    input[type="checkbox"] {
+      margin-right: 5px;
+      margin-top: 1px;
+    }
+    label {
+      font-weight: 100;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.pass_requirements {
+  border: 1px solid $secHeadingColor;
+  padding: 15px;
+  background-color: lighten( #e5efff, 10% );
+  h2 {
+    color: $secHeadingColor;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  .pass_requirements-list {
+    li {
+      color: #ce0014;
+      font-size: 1.5rem;
+      line-height: 1.3;
+      list-style: disc;
+    }
+  }
+}
+
+.pass_confirmation {
+  #password_confirm-input {
+    margin-bottom: 0;
+  }
+  .pass-str-indicator {
+    width: 100%;
+  }
+  .first_level > .ind-bar {
+    display: inline-block;
+    height: 5px;
+    width: 25%;
+    margin-right: -3px;
+    background-color: #ce0014;
+  }
+  .sec_level > .ind-bar {
+    display: inline-block;
+    height: 5px;
+    width: 25%;
+    margin-right: -3px;
+    background-color: #fff328;
+  }
+  .third_level > .ind-bar {
+    display: inline-block;
+    height: 5px;
+    width: 25%;
+    margin-right: -3px;
+    background-color: #88ff90;
+  }
+  .fourth_level > .ind-bar {
+    display: inline-block;
+    height: 5px;
+    width: 25%;
+    margin-right: -3px;
+    background-color: #32ff0e;
+  }
+}
+
+.input-error {
+  color: #ff0e0c;
+  font-size: 1.3rem;
+  padding-left: 5px;
+  margin: 5px 0;
+}
+
+.input-error--email,
+.input-error--f_name,
+.input-error--l_name,
+.input-error--password {
+  @extend .input-error;
+}

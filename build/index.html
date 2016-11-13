@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Template-test-form</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/app.css?rel=0.0.2"><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
+    <![endif]-->
+    <div class="container relative">
+      <div class="col-sm-4 col-xs-12">
+        <form class="new_account_form--customer row"><img src="./assets/img/samsung.png" class="account_form-logo">
+          <h1>Create a new account</h1>
+          <hr>
+          <input type="email" placeholder="Email" id="email-input">
+          <p class="input-error--email">Please enter correct value</p>
+          <input type="text" placeholder="First name" id="first_name-input">
+          <p class="input-error--f_name">Please enter correct value</p>
+          <input type="text" placeholder="Last name" id="last_name-input">
+          <p class="input-error--l_name">Please enter correct value</p>
+          <label for="password-input">Generate strong password</label>
+          <input type="password" placeholder="Password" id="password-input" class="error-password">
+          <p class="input-error--password">Please enter correct value</p>
+          <section class="pass_requirements col-xs-12 pad0">
+            <h2>Password must meet the following requirements:</h2>
+            <ul class="pass_requirements-list">
+              <div class="col-sm-6 col-xs-12">
+                <li>One lowercase character</li>
+                <li>One uppercase character</li>
+                <li>One number</li>
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <li>One special character</li>
+                <li>Eight characters minimum</li>
+              </div>
+            </ul>
+          </section>
+          <section class="pass_confirmation col-xs-12 pad0">
+            <input type="password" placeholder="Confirm password" id="password_confirm-input" class="error-password">
+            <div class="pass-str-indicator">
+              <div class="first_level">
+                <div class="ind-bar"></div>
+                <p class="password-str">Password strength: Fair</p>
+              </div>
+              <div class="sec_level">
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <p class="password-str">Password strength: Good</p>
+              </div>
+              <div class="third_level">
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <p class="password-str">Password strength: Strong</p>
+              </div>
+              <div class="fourth_level">
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <div class="ind-bar"></div>
+                <p class="password-str">Password strength: Very Strong</p>
+              </div>
+            </div>
+            <p class="input-error--password">Password must be at least 8 characters long</p>
+            <p class="password-str">Password strength: Weak</p>
+          </section>
+          <section class="choose_country col-xs-12 pad0">
+            <div class="country_checkbox">
+              <input type="checkbox" id="BMSAT">
+              <label for="BMSAT">BMSAT</label>
+            </div>
+            <div class="country_checkbox">
+              <input type="checkbox" id="BMSD">
+              <label for="BMSD">BMSD</label>
+            </div>
+            <div class="country_checkbox">
+              <input type="checkbox" id="BMSN">
+              <label for="BMSN">BMSN</label>
+            </div>
+            <div class="country_checkbox">
+              <input type="checkbox" id="BMSUK">
+              <label for="BMSUK">BMSUK</label>
+            </div>
+            <div class="country_checkbox">
+              <input type="checkbox" id="DEMO">
+              <label for="DEMO">DEMO</label>
+            </div>
+            <div class="country_checkbox">
+              <input type="checkbox" id="PERF">
+              <label for="PERF">PERF</label>
+            </div>
+          </section>
+          <button type="submit" id="account_form-submit">Register</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="./libs/jquery.validate.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
