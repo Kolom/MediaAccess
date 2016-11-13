@@ -150,3 +150,42 @@ body {
 .input-error--password {
   @extend .input-error;
 }
+#popup {
+  position: absolute;
+  max-width: 300px;
+  max-height: 200px;
+  left: calc(50% - 150px);
+  top: calc(30% - 100px);
+  background-color: #eeeeee;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  z-index: 10;
+  opacity: 0.8;
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+  a {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+    color: $secHeadingColor;
+  }
+  a:hover {
+    text-decoration: none;
+    color: darken( $secHeadingColor, 20% );
+  }
+}
