@@ -73,6 +73,7 @@ body {
     input[type="checkbox"] {
       margin-right: 5px;
       margin-top: 1px;
+      outline: none;
     }
     label {
       font-weight: 100;
@@ -150,6 +151,21 @@ body {
 .input-error--password {
   @extend .input-error;
 }
+input[type="text"][placeholder]          {text-overflow:ellipsis; color: #444444}
+input[type="text"]::-moz-placeholder     {text-overflow:ellipsis; color: #444444}
+input[type="text"]:-moz-placeholder      {text-overflow:ellipsis; color: #444444}
+input[type="text"]:-ms-input-placeholder {text-overflow:ellipsis; color: #444444}
+
+input[type="email"][placeholder]          {text-overflow:ellipsis; color: #444444}
+input[type="email"]::-moz-placeholder     {text-overflow:ellipsis; color: #444444}
+input[type="email"]:-moz-placeholder      {text-overflow:ellipsis; color: #444444}
+input[type="email"]:-ms-input-placeholder {text-overflow:ellipsis; color: #444444}
+
+input[type="password"][placeholder]          {text-overflow:ellipsis; color: #444444}
+input[type="password"]::-moz-placeholder     {text-overflow:ellipsis; color: #444444}
+input[type="password"]:-moz-placeholder      {text-overflow:ellipsis; color: #444444}
+input[type="password"]:-ms-input-placeholder {text-overflow:ellipsis; color: #444444}
+
 #popup {
   position: absolute;
   max-width: 300px;

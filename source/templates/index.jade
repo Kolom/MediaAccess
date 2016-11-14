@@ -22,7 +22,7 @@ html
           input(type="text" placeholder="Last name" id="last_name-input")
           p.input-error--l_name.hidden Please enter correct value
           label(for="password-input") Generate strong password
-          input(type="password" placeholder="Password" id="password-input").error-password
+          input(type="password" placeholder="Password" id="password-input")
           p.input-error--password.hidden Please enter correct value
           section.pass_requirements.col-xs-12.pad0
             h2 Password must meet the following requirements:
@@ -37,26 +37,26 @@ html
           section.pass_confirmation.col-xs-12.pad0
             input(type="password" placeholder="Confirm password" id="password_confirm-input").error-password
             .pass-str-indicator
-              p.password-str Password strength: Weak
-              .first_level
+              p.password-str.hidden Password strength: Weak
+              .first_level.hidden
                 .ind-bar
                 p.password-str Password strength: Fair
-              .sec_level
+              .sec_level.hidden
                 .ind-bar
                 .ind-bar
                 p.password-str Password strength: Good
-              .third_level
+              .third_level.hidden
                 .ind-bar
                 .ind-bar
                 .ind-bar
                 p.password-str Password strength: Strong
-              .fourth_level
+              .fourth_level.hidden
                 .ind-bar
                 .ind-bar
                 .ind-bar
                 .ind-bar
                 p.password-str Password strength: Very Strong
-            p.input-error--password Password must be at least 8 characters long
+            p.input-error--password.hidden Password must be at least 8 characters long
 
           section.choose_country.col-xs-12.pad0
             .country_checkbox
