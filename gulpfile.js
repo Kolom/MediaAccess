@@ -3,9 +3,8 @@ var $ = {
   config: require('./project/config.js'),
   path: {
     system: require('./project/path.system.js'),
-    react: require('./project/path.react.js'),
     app: require('./project/path.app.js'),
-    sass: require('./project/path.sass.js'),
+    less: require('./project/path.less.js'),
     template: require('./project/path.template.js'),
     task: require('./project/path.task.js')
   },
@@ -13,6 +12,10 @@ var $ = {
   sequence: require('run-sequence'),
   rimraf: require('rimraf'),
   gulp: require('gulp'),
+  less: require('gulp-less'),
+  plumber: require('gulp-plumber'),
+  cssmin: require('gulp-cssmin'),
+  rename: require('gulp-rename'),
   $gulp: require('gulp-load-plugins')({
     lazy: false,
     rename: {
@@ -31,12 +34,10 @@ $.gulp.task('default', function() {
   $.sequence(
     [
       'js:process',
-      'react:process',
-      'scss:process',
+      'less:process',
       'jade:process',
       'img:sprite',
       'copy:libs',
-      'scss:release',
       'copy:resource'
     ],
     'service:server'
@@ -52,7 +53,6 @@ $.gulp.task('build', function(cb) {
     [
       'js:release',
       'react:process',
-      'scss:release',
       'jade:process',
       'img:sprite',
       'copy:libs',

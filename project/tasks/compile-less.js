@@ -1,28 +1,31 @@
-'use strict';
+// var builder = function($) {
 
-var gulp = require('gulp');
-var less = require('gulp-less');
-var path  = require('path');
-var plumber = require('gulp-plumber');
-var cssmin = require('gulp-cssmin');
-var rename = require('gulp-rename');
-// var sourcemaps = require('gulp-sourcemaps');
-var buildErrorHandler = require('./../utilities/build-error-handler').handleBuildError;
+//   $.gulp.task('less:process', function(done) {
 
-gulp.task('less:build-styles', function(done) {
-  gulp.src('src/less/application.less')
-  // .pipe(sourcemaps.init())
-  .pipe(plumber({
-    errorHandler: buildErrorHandler
-  }))
-  .pipe(less({
-    paths: [ path.join(__dirname, 'less', 'includes') ]
-  }))
-  .pipe(cssmin())
-  .pipe(rename({suffix: '.min'}))
-  // .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('build/css'))
-  ;
+//     return $.gulp.src($.path.less)
 
-  done();
-});
+//         .pipe(less({
+//           paths: [ path.join(__dirname, 'less', 'includes') ]
+//         }))
+//         .pipe(cssmin())
+//         .pipe(rename({suffix: '.min'}))
+//         .pipe($.gulp.dest('build/assets/css'))
+//   });
+// };
+
+var builder = function($) {
+
+  $.gulp.task('less:process', function() {
+    return $.gulp.src('./source/less/application.less')
+
+      .pipe($.less({
+       paths: [ $.path.less.join(__dirname, 'less', 'includes') ]
+      }))
+
+      .pipe($.cssmin())
+      .pipe($.rename({suffix: '.min'}))
+      .pipe($.gulp.dest($.config.root + '/assets/css'))
+  });
+};
+
+module.exports = builder;
