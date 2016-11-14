@@ -190,7 +190,7 @@ body {
     list-style: disc; }
 
 .pass_confirmation #password_confirm-input {
-  margin-bottom: 0; }
+  margin-bottom: 5px; }
 
 .pass_confirmation .pass-str-indicator {
   width: 100%; }

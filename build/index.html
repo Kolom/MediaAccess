@@ -19,7 +19,7 @@
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     <div class="container relative">
-      <div id="popup">
+      <div id="popup" class="hidden">
         <h2>Registration successful!</h2>
         <p>Please check your email for registration confirmation!</p><a href="#">I didn't receive an email, send me another one.</a>
       </div>
@@ -34,7 +34,7 @@
           <input type="text" placeholder="Last name" id="last_name-input">
           <p class="input-error--l_name hidden">Please enter correct value</p>
           <label for="password-input">Generate strong password</label>
-          <input type="password" placeholder="Password" id="password-input" class="error-password">
+          <input type="password" placeholder="Password" id="password-input">
           <p class="input-error--password hidden">Please enter correct value</p>
           <section class="pass_requirements col-xs-12 pad0">
             <h2>Password must meet the following requirements:</h2>
@@ -51,25 +51,25 @@
             </ul>
           </section>
           <section class="pass_confirmation col-xs-12 pad0">
-            <input type="password" placeholder="Confirm password" id="password_confirm-input" class="error-password">
+            <input type="password" placeholder="Confirm password" id="password_confirm-input">
             <div class="pass-str-indicator">
-              <p class="password-str">Password strength: Weak</p>
-              <div class="first_level">
+              <p class="password-str hidden">Password strength: Weak</p>
+              <div class="first_level hidden">
                 <div class="ind-bar"></div>
                 <p class="password-str">Password strength: Fair</p>
               </div>
-              <div class="sec_level">
+              <div class="sec_level hidden">
                 <div class="ind-bar"></div>
                 <div class="ind-bar"></div>
                 <p class="password-str">Password strength: Good</p>
               </div>
-              <div class="third_level">
+              <div class="third_level hidden">
                 <div class="ind-bar"></div>
                 <div class="ind-bar"></div>
                 <div class="ind-bar"></div>
                 <p class="password-str">Password strength: Strong</p>
               </div>
-              <div class="fourth_level">
+              <div class="fourth_level hidden">
                 <div class="ind-bar"></div>
                 <div class="ind-bar"></div>
                 <div class="ind-bar"></div>
@@ -77,7 +77,7 @@
                 <p class="password-str">Password strength: Very Strong</p>
               </div>
             </div>
-            <p class="input-error--password">Password must be at least 8 characters long</p>
+            <p class="input-error--password hidden">Password must be at least 8 characters long</p>
           </section>
           <section class="choose_country col-xs-12 pad0">
             <div class="country_checkbox">
@@ -110,7 +110,9 @@
       </div>
     </div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="./libs/jquery.validate.min.js"></script>
-    <script src="./js/app.js"></script>
+    <!--script(src='./libs/jquery.validate.min.js')-->
+    <!--script(src='./js/app.js')-->
+    <!--script(src='./js/index.js')-->
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>

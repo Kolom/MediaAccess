@@ -1,4 +1,4 @@
-;/**
+/**
  * Initialize form event listeners
  */
 function initForm() {
@@ -162,5 +162,3 @@ function getAccountObj() {
     }
 }
 
-
-//# sourceMappingURL=app.js.map

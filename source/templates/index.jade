@@ -6,7 +6,7 @@ html
     <p class="browsehappy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста <a href="http://browsehappy.com/">обновите его</a></p>
     <![endif]-->
     .container.relative
-      #popup
+      #popup.hidden
         h2 Registration successful!
         p Please check your email for registration confirmation!
         a(href="#") I didn't receive an email, send me another one.
@@ -35,7 +35,7 @@ html
                 li One special character
                 li Eight characters minimum
           section.pass_confirmation.col-xs-12.pad0
-            input(type="password" placeholder="Confirm password" id="password_confirm-input").error-password
+            input(type="password" placeholder="Confirm password" id="password_confirm-input")
             .pass-str-indicator
               p.password-str.hidden Password strength: Weak
               .first_level.hidden
