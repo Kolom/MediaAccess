@@ -31,11 +31,11 @@ body {
   input[type="email"],
   input[type="password"] {
     width: 100%;
-    @extend .grey_input;
+    .grey_input;
   }
   label[for="password-input"] {
     text-align: center;
-    color: darken( $secHeadingColor, 10% );
+    color: darken(@secHeadingColor, 10%);
     //color: #40649b;
     width: 100%;
     font-size: 1.5rem;
@@ -47,17 +47,21 @@ body {
   }
 
   #account_form-submit {
-    background-color: darken( $secHeadingColor, 20% );
+    background-color: darken(@secHeadingColor, 20%);
     color: #fff;
-    border: 1px solid darken( $secHeadingColor, 20% );
+    border: 1px solid darken(@secHeadingColor, 20%);
     width: 100%;
     padding: 10px 0;
     margin: 20px 0;
   }
   #account_form-submit:active {
     background-color: #fff;
-    color: darken( $secHeadingColor, 20% );
-    border: 1px solid darken( $secHeadingColor, 20% );
+    color: darken(@secHeadingColor, 20%);
+    border: 1px solid darken(@secHeadingColor, 20%);
+  }
+  button[type="submit"]:active,
+  button[type="submit"]:focus {
+    outline: none;
   }
 }
 
@@ -70,10 +74,33 @@ body {
     display: flex;
     flex-direction: row;
     flex-basis: 33%;
-    input[type="checkbox"] {
+    /*input[type="checkbox"] {
       margin-right: 5px;
       margin-top: 1px;
       outline: none;
+    }*/
+    input[type="checkbox"] {
+      visibility: hidden;
+    }
+    input[type="checkbox"] + label {
+      position: relative;
+    }
+    input[type="checkbox"] + label::before {
+      content: " ";
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border: 1px solid #000;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-top: 1px;
+    }
+    input[type="checkbox"]:checked + label::after {
+      content: "✔";
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+      font-size: 15px;
     }
     label {
       font-weight: 100;
@@ -83,11 +110,11 @@ body {
 }
 
 .pass_requirements {
-  border: 1px solid $secHeadingColor;
+  border: 1px solid @secHeadingColor;
   padding: 15px;
   background-color: lighten( #e5efff, 10% );
   h2 {
-    color: $secHeadingColor;
+    color: @secHeadingColor;
     font-size: 1.5rem;
     margin-bottom: 5px;
   }
@@ -149,7 +176,7 @@ body {
 .input-error--f_name,
 .input-error--l_name,
 .input-error--password {
-  @extend .input-error;
+  .input-error;
 }
 input[type="text"][placeholder]          {text-overflow:ellipsis; color: #444444}
 input[type="text"]::-moz-placeholder     {text-overflow:ellipsis; color: #444444}
@@ -198,10 +225,10 @@ input[type="password"]:-ms-input-placeholder {text-overflow:ellipsis; color: #44
     margin: 20px auto;
     text-align: center;
     display: block;
-    color: $secHeadingColor;
+    color: @secHeadingColor;
   }
   a:hover {
     text-decoration: none;
-    color: darken( $secHeadingColor, 20% );
+    color: darken(@secHeadingColor, 20%);
   }
 }

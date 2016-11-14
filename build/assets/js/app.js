@@ -1,30 +1,42 @@
-;/**
+;/* --- Initialization section --- */
+
+/**
  * Initialize form event listeners
  */
 function initForm() {
     var accountForm = document.querySelector('.new_account_form--customer');
     var passwordInput = document.querySelector('#password-input');
 
-    accountForm.onsubmit = submitAccountForm;
-    passwordInput.oninput = checkPassStrength;
+    accountForm.onsubmit = submitAccountForm; // set onsubmit event handler for form
+    accountForm.noValidate = true; //disable browser validation
+
+    passwordInput.oninput = checkPassStrength; // set oninput event handler for password input
 }
 
 window.onload = function () {
     initForm();
 };
 
-//Event handlers section
+/* --- Event handlers section --- */
 
 /**
- * Form submit
+ * Form submit event handler
  *
  * @returns {boolean} - form common validation result
  */
 function submitAccountForm() {
     var account = getAccountObj();
     var accountValidationResult = validateAccount(account);
-    renderValidationMessages(accountValidationResult);
 
+    //check that all fields are valid
+    if (accountValidationResult.isValid === true) {
+        var popup = document.querySelector('#popup');
+        popup.classList.remove('hidden'); //show popup
+    } else
+    //show validation messages if some of form fields aren't valid
+        renderValidationMessages(accountValidationResult);
+
+    // return false to prevent page reload
     return false;
 }
 
@@ -60,7 +72,7 @@ function checkPassStrength(e) {
         fourthLevelStrength.classList.remove('hidden');
 }
 
-//service functions
+/* --- Validation --- */
 /**
  * Validate account object.
  * Returns validation object with fields - isValid and validationMessage
