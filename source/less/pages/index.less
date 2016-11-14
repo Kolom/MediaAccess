@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 body {
   height: 100%;
   width: 100%;
@@ -17,6 +19,14 @@ body {
   border: 1px solid #eeeeee;
   color: #eeeeee;
 }
+.success {
+  border: 1px solid #51ff2c !important;
+}
+.error {
+  border: 1px solid #ce0014 !important;
+}
+
+/*ACCOUNT FORM--CUSTOMER*/
 
 .new_account_form--customer {
   font-family: Arial;
@@ -36,14 +46,10 @@ body {
   label[for="password-input"] {
     text-align: center;
     color: darken(@secHeadingColor, 10%);
-    //color: #40649b;
     width: 100%;
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: -1px;
-  }
-  .error-password {
-    border: 1px solid #ce0014 !important;
   }
 
   #account_form-submit {
@@ -64,6 +70,8 @@ body {
     outline: none;
   }
 }
+
+/*COUNTRY BLOCK, CUSTOM CHECKBOX*/
 
 .choose_country {
   display: flex;
@@ -124,6 +132,8 @@ body {
   }
 }
 
+/*PASSWORD STR INDICATOR*/
+
 .pass_confirmation {
   #password_confirm-input {
     margin-bottom: 5px;
@@ -161,6 +171,8 @@ body {
   }
 }
 
+/*INPUTS*/
+
 .input-error {
   color: #ff0e0c;
   font-size: 1.3rem;
@@ -188,6 +200,8 @@ input[type="password"][placeholder]          {text-overflow:ellipsis; color: #44
 input[type="password"]::-moz-placeholder     {text-overflow:ellipsis; color: #444444}
 input[type="password"]:-moz-placeholder      {text-overflow:ellipsis; color: #444444}
 input[type="password"]:-ms-input-placeholder {text-overflow:ellipsis; color: #444444}
+
+/*POPUP*/
 
 #popup {
   position: absolute;
