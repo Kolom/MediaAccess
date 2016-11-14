@@ -70,15 +70,11 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   align-self: stretch;
+  margin-top: 10px;
   .country_checkbox {
     display: flex;
     flex-direction: row;
     flex-basis: 33%;
-    /*input[type="checkbox"] {
-      margin-right: 5px;
-      margin-top: 1px;
-      outline: none;
-    }*/
     input[type="checkbox"] {
       visibility: hidden;
     }
@@ -197,8 +193,6 @@ input[type="password"]:-ms-input-placeholder {text-overflow:ellipsis; color: #44
   position: absolute;
   max-width: 300px;
   max-height: 200px;
-  left: calc(50% - 150px);
-  top: calc(30% - 100px);
   background-color: #eeeeee;
   border: 1px solid #000000;
   border-radius: 5px;
@@ -207,6 +201,8 @@ input[type="password"]:-ms-input-placeholder {text-overflow:ellipsis; color: #44
   align-content: space-around;
   z-index: 10;
   opacity: 0.8;
+  left: ~"calc(50% - 150px)";
+  top: ~"calc(30% - 100px)";
   h2 {
     width: 100%;
     text-align: center;

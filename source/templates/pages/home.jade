@@ -1,18 +1,22 @@
-.container
+.container.relative
+    #popup.hidden
+        h2 Registration successful!
+        p Please check your email for registration confirmation!
+        a(href="#") I didn't receive an email, send me another one.
     .col-sm-4.col-xs-12
         form.new_account_form--customer.row
-            img(src="./img/samsung.png").account_form-logo
+            img(src="./assets/img/samsung.png").account_form-logo
             h1 Create a new account
             hr
             input(type="email" placeholder="Email" id="email-input")
-            p.input-error--email Please enter correct value
+            p.input-error--email.hidden Please enter correct value
             input(type="text" placeholder="First name" id="first_name-input")
-            p.input-error--f_name Please enter correct value
+            p.input-error--f_name.hidden Please enter correct value
             input(type="text" placeholder="Last name" id="last_name-input")
-            p.input-error--l_name Please enter correct value
+            p.input-error--l_name.hidden Please enter correct value
             label(for="password-input") Generate strong password
-            input(type="password" placeholder="Password" id="password-input").error-password
-            p.input-error--password Please enter correct value
+            input(type="password" placeholder="Password" id="password-input")
+            p.input-error--password.hidden Please enter correct value
             section.pass_requirements.col-xs-12.pad0
                 h2 Password must meet the following requirements:
                 ul.pass_requirements-list
@@ -24,19 +28,29 @@
                         li One special character
                         li Eight characters minimum
             section.pass_confirmation.col-xs-12.pad0
-                input(type="password" placeholder="Confirm password" id="password_confirm-input").error-password
+                input(type="password" placeholder="Confirm password" id="password_confirm-input")
                 .pass-str-indicator
-                    .first_level
+                    p.password-str.hidden Password strength: Weak
+                    .first_level.hidden
                         .ind-bar
-                    .sec_level
-                        .ind-bar
-                        .ind-bar
-                    .third_level
-                        .ind-bar
+                        p.password-str Password strength: Fair
+                    .sec_level.hidden
                         .ind-bar
                         .ind-bar
+                        p.password-str Password strength: Good
+                    .third_level.hidden
+                        .ind-bar
+                        .ind-bar
+                        .ind-bar
+                        p.password-str Password strength: Strong
+                    .fourth_level.hidden
+                        .ind-bar
+                        .ind-bar
+                        .ind-bar
+                        .ind-bar
+                        p.password-str Password strength: Very Strong
+                p.input-error--password.hidden Password must be at least 8 characters long
 
-                p.input-error--password Password must be at least 8 characters long
             section.choose_country.col-xs-12.pad0
                 .country_checkbox
                     input(type="checkbox" id="BMSAT")
@@ -57,7 +71,3 @@
                     input(type="checkbox" id="PERF")
                     label(for="PERF") PERF
             button(type="submit" id="account_form-submit") Register
-
-
-
-
