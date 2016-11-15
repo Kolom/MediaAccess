@@ -24,3 +24,13 @@ This is Media Access responsive mobile friendly form (for customer).
     $ sudo npm install gulp -g && npm install 
     $ npm start 
     $ start localhost:8080/index.html
+
+## Screenshots
+
+![start](screenshots/start.png "Start")
+![first validation](screenshots/first valid.png "First validation")
+![second validation](screenshots/second valid.png "Second validation")
+![third validation](screenshots/third valid.png "Third validation")
+![fourth validation](screenshots/fourth valid.png "Fourth validation")
+![full validation popup](screenshots/full valid popup.png "Full validation, popup")
+![Country in url](screenshots/country in url.png "Country in url, hidden checkbox section")
