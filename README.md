@@ -14,7 +14,8 @@ This is Media Access responsive mobile friendly form (for customer).
 * Form fields validation; 
 * Password validation with real time color strength indicator; 
 * Custom checkboxes; 
-* Display popup after submitting a form, if all fields validation passed correctly.
+* Display popup after submitting a form, if all fields validation passed correctly;
+* Country checkbox section hidden if URL contains "country" in string.
 
 ## Quickstart
 
