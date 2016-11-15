@@ -33,14 +33,13 @@ window.onload = function () {
 function submitAccountForm() {
   var account = getAccountObj();
   var accountValidationResult = validateAccount(account);
+  var popup = document.querySelector('#popup');
 
   //check that all fields are valid
-  if (accountValidationResult.isValid === true) {
-    var popup = document.querySelector('#popup');
-    popup.classList.remove('hidden'); //show popup
-  } else
-  //show validation messages if some of form fields aren't valid
-    renderValidationMessages(accountValidationResult);
+  if (accountValidationResult.isValid === true) popup.classList.remove('hidden'); //show popup
+
+  //render inputs validation status and messages if exists
+  renderValidationMessages(accountValidationResult);
 
   // return false to prevent page reload
   return false;
