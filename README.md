@@ -33,4 +33,4 @@ This is Media Access responsive mobile friendly form (for customer).
 ![third validation](screenshots/third valid.png "Third validation")
 ![fourth validation](screenshots/fourth valid.png "Fourth validation")
 ![full validation popup](screenshots/full valid popup.png "Full validation, popup")
-![country in url](screenshots/country in url.png "Country in url, hidden checkbox section")
+![country in url](screenshots/country-url.png.png "Country in url hidden checkbox section")
