@@ -3,9 +3,10 @@
         h2 Registration successful!
         p Please check your email for registration confirmation!
         a(href="#") I didn't receive an email, send me another one.
-    .col-sm-4.col-xs-12
+    .col-sm-10.col-sm-offset-1.col-xs-12
         form.new_account_form--customer.row
-            img(src="./assets/img/samsung.png").account_form-logo
+            .logo_wrap
+                img(src="./assets/img/samsung.png").account_form-logo
             h1 Create a new account
             hr
             input(type="email" placeholder="Email" id="email-input")

@@ -16,8 +16,8 @@ body {
 .grey_input {
   margin: 10px auto;
   padding: 10px 5px;
-  border: 1px solid #eeeeee;
-  color: #eeeeee;
+  border: 1px solid darken(@borderFieldColor, 20%);
+  color: @borderFieldColor;
 }
 .success {
   border: 1px solid #51ff2c !important;
@@ -30,10 +30,16 @@ body {
 
 .new_account_form--customer {
   font-family: Arial;
-  .account_form-logo {
+  padding: 50px 0;
+  .logo_wrap {
     margin: auto;
     display: block;
+    width: 200px;
+    .account_form-logo {
+      width: 100%;
+    }
   }
+
   h1 {
     font-size: 2rem;
   }
@@ -43,6 +49,16 @@ body {
     width: 100%;
     .grey_input;
   }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: 2px solid #798caa;
+  }
+  input[type="password"] {
+    background: url("./../img/hide.png") no-repeat 99%;
+    background-size: 25px;
+  }
+
   label[for="password-input"] {
     text-align: center;
     color: darken(@secHeadingColor, 10%);
@@ -63,9 +79,9 @@ body {
   #account_form-submit:active {
     background-color: #fff;
     color: darken(@secHeadingColor, 20%);
-    border: 1px solid darken(@secHeadingColor, 20%);
+    border: none;
+    outline: 2px solid #798caa;
   }
-  button[type="submit"]:active,
   button[type="submit"]:focus {
     outline: none;
   }
