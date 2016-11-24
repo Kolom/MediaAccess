@@ -25,6 +25,17 @@ This is Media Access responsive mobile friendly form (for customer).
     $ npm start 
     $ start localhost:8080/index.html
 
+## Version 1.1
+
+* Form width increased (for better visibility);
+* Form centered;
+* Used less color function on form input fields borders (for better visibility);
+* Outline appears on input field when it gets focus;
+* Outline appears on submit button on click;
+* Favicon added;
+* Logo wrapper added;
+* Background image for password input field added.
+
 ## Screenshots
 
 ![start](screenshots/start.png "Start")
